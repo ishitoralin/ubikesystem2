@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
+
+/* navbar */
+.navbarContainer {
+    width: 100%;
+    height: 104px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-bottom: 1px solid #EBEBEB;
+    padding: 0 124px;
+}
+
+.navbarLogo{
+    width: 95px;
+    height: 95px;    
+    /* border: 2px solid red; */
+    overflow: hidden;
+    cursor: pointer;
+}
+.navbarList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    margin-right: auto;
+    font-size: 18px;
+    line-height: 24px;
+    color: #677510;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.navbarList>div:not(:last-child){
+    margin-right: 40px;
+}
+
+.navbarList>div:hover{
+    color: #B5CC22;
+    cursor: pointer;
+}
+
+.navbarloginIcon{
+    width: 85px;
+    height: 50px;
+    background-color: #B5CC22;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;    
+}
+
+.navbarloginIcon:hover{
+    cursor: pointer;
+}
+
+
+/* body */
+.bodyContainer{
+    padding: 0 124px;
+}
+
+.bodyTitle{
+    padding: 25px 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 4.32px;
+    font-weight: 700;
+    color: #B5CC22;
+}
+
+.searchPart{
+    height: 64px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.searchPart>div{
+    margin:0 16px 0 0;
+}
+
+/* check button group & big photo */
+.checkPart{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.buttonGroup{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.checkAllButton{
+    width: 117px;
+    height: 40px;
+    margin: 24px 0;
+}
+
+.photoContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.tableContainer{
+    margin-top: 40px;
+    width: 100%;
+    height: 500px;
+}
+
+.tableHead{
+    width: 100%;
+    height: 66px;
+    background-color: #B5CC22;
+    border-radius: 28px 28px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.tableBodyOdd{
+    width: 100%;
+    height: 66px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.tableBodyEven{
+    width: 100%;
+    height: 66px;
+    background-color: #F6F6F6;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tableHead>div,
+.tableBodyEven>div,
+.tableBodyOdd>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tableHead>div:nth-child(1),
+.tableBodyEven>div:nth-child(1),
+.tableBodyOdd>div:nth-child(1){
+    width: 116px;
+}
+.tableHead>div:nth-child(2),
+.tableBodyEven>div:nth-child(2),
+.tableBodyOdd>div:nth-child(2){
+    width: 208px;
+}
+.tableHead>div:nth-child(3),
+.tableBodyEven>div:nth-child(3),
+.tableBodyOdd>div:nth-child(3){
+    width: 440px;
+}
+
+.tableHead>div:nth-child(4),
+.tableBodyEven>div:nth-child(4),
+.tableBodyOdd>div:nth-child(4){
+    width: 208px;
+}
+.tableHead>div:nth-child(5),
+.tableBodyEven>div:nth-child(5),
+.tableBodyOdd>div:nth-child(5){
+    width: 176px;
+}
+
+.tableBodyEven>div:nth-child(4),
+.tableBodyOdd>div:nth-child(4){
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #B5CC22;
+}
+
+.tableBodyEven>div:nth-child(5),
+.tableBodyOdd>div:nth-child(5){
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #B5CC22;
+}
+
+.tableBodyEven>div:nth-child(n+1):nth-child(-n+3),
+.tableBodyOdd>div:nth-child(n+1):nth-child(-n+3){
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #323232,
+}
+
+
+.tableContainer>div:nth-last-child(1){
+    border-radius: 0 0 28px 28px;
+}
