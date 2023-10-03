@@ -23,7 +23,7 @@ export default function Body() {
   const [age, setAge] = React.useState('')
   const [data, setData] = useState([])
   const [cities, setCities] = useState([])
-  console.log(cities)
+  // console.log(cities)
   const handleChange = (event) => {
     setAge(event.target.value)
   }
@@ -107,18 +107,44 @@ export default function Body() {
     marginRight: '16px',
     marginBottom: '15px',
   }
-  const url =
-    'https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json'
+
   useEffect(() => {
+    const url =
+      'https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json'
     fetch(url)
       .then((r) => r.json())
       .then((data) => {
         setData(data)
-
         const uniqueCities = [...new Set(data.map((item) => item.sarea))]
         setCities(uniqueCities)
       })
   }, [])
+
+  // const [cards, setCards] = useState([])
+  // console.log(cards)
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const url = 'https://omgvamp-hearthstone-v1.p.rapidapi.com/cards'
+  //       const options = {
+  //         method: 'GET',
+  //         headers: {
+  //           'X-RapidAPI-Key':
+  //             'cbe2de32camshd2edc08507a9b3fp1bd1f3jsnd5d3bb0021d4',
+  //           'X-RapidAPI-Host': 'omgvamp-hearthstone-v1.p.rapidapi.com',
+  //         },
+  //       }
+  //       const response = await fetch(url, options)
+  //       const resultes = await response.json()
+  //       const limitData = await resultes.Battlegrounds.slice(0, 30)
+
+  //       setCards(limitData)
+  //     } catch {
+  //       console.log('沒抓到資料')
+  //     }
+  //   }
+  //   fetchData()
+  // }, [])
 
   return (
     <>
@@ -184,7 +210,7 @@ export default function Body() {
             />
             {/* btn group */}
             <div className={styles.buttonGroup}>
-            {/* {cities.map(()=>{})} */}
+              {/* {cities.map(()=>{})} */}
               <FormGroup sx={styleForFormGourp}>
                 <FormControlLabel
                   control={<Checkbox />}
@@ -310,6 +336,7 @@ export default function Body() {
               alt="Ubike Logo"
               width="502"
               height="172"
+              priority
             ></Image>
           </div>
         </div>
